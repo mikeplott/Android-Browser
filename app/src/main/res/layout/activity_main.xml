@@ -10,8 +10,60 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mike.browserandroid.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="⇦"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/back"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:text="⇨"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forward"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/addressBar"
+                android:layout_weight="1"
+                android:hint="Type URL..." />
+
+            <Button
+                android:text="go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/go"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="438dp"
+            android:id="@+id/web">
+
+        </WebView>
+
+    </LinearLayout>
+
 </RelativeLayout>
